@@ -34,7 +34,7 @@ const submit = () => {
         </div>
 
         <form @submit.prevent="submit">
-            <div class="my-5 text-center">                
+            <div class="my-6 text-center">                
                 <h2 class="text-5xl text-gray-800 font-bold">SAB</h2>
             </div>
 

@@ -31,7 +31,8 @@ Route::get('/dashboard', function () {
     return Inertia::render('Dashboard', ['nUsers' => $nUsers]);
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::resource('users',Usuario::class);
+Route::resource('users', Usuario::class);
+Route::get('users/profile/{id}', [Usuario::class, 'profile'])->middleware(['auth', 'verified'])->name('users.profile');
 
 
 require __DIR__.'/auth.php';

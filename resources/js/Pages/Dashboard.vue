@@ -4,7 +4,7 @@ import { Head } from "@inertiajs/inertia-vue3";
 
 const props = defineProps({
     nUsers: {
-        type: Object,
+        type: Number,
         default: () => ({}),
     },    
 });

@@ -98,18 +98,15 @@ function formatDate(dateString) {
                                             Tipo Usuario
                                         </th>
                                         <th scope="col" class="px-6 py-3">
-                                            Editar
-                                        </th>
-                                        <th scope="col" class="px-6 py-3">
-                                            Eliminar
-                                        </th>
+                                            Acciones
+                                        </th>                                        
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr
                                         v-for="(user, index) in users"
                                         :key="user.id"
-                                        class="bg-zinc-100 border-b"
+                                        class="bg-zinc-50 border-b"
                                     >
                                         <th
                                             scope="row"
@@ -155,19 +152,22 @@ function formatDate(dateString) {
                                                 :href="
                                                     route('users.edit', user.id)
                                                 "
-                                                class="px-4 py-2 text-white bg-blue-600 rounded-lg uppercase"
-                                                >Editar</Link
+                                                title="Editar Usuario"
+                                                class="text-white bg-blue-600 rounded-lg inline-block leading-normal transition duration-150 ease-in-out w-9 h-9 mx-2"
+                                                as="button"
+                                                >
+                                                <font-awesome-icon icon="fa-solid fa-user-pen" class="mx-auto"/>
+                                                </Link
                                             >
-                                        </td>
-                                        <td class="px-6 py-4">
                                             <button
                                                 type="button"
-                                                class="px-4 py-2 text-white bg-red-600 rounded-lg uppercase"
+                                                title="Eliminar Usuario"
+                                                class="text-white bg-red-600 rounded-lg inline-block leading-normal transition duration-150 ease-in-out w-9 h-9 mx-2"
                                                 @click="destroy(user.id)"
                                             >
-                                                Eliminar
+                                            <font-awesome-icon icon="fa-solid fa-trash-can" class="mx-auto"/>
                                             </button>
-                                        </td>
+                                        </td>                                        
                                     </tr>
                                 </tbody>
                             </table>

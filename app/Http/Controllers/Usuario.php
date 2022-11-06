@@ -109,6 +109,18 @@ class Usuario extends Controller
         );
     }
 
+    public function profile($id)
+    {
+        $user = User::with('tipos')->find($id);               
+
+        return Inertia::render(
+            'Users/Profile',
+            [
+                'user' => $user,                
+            ]
+        );
+    }
+
     /**
      * Update the specified resource in storage.
      *

@@ -45,6 +45,7 @@ const submit = () => {
                 <InputLabel for="email" value="Correo" />
                 <TextInput
                     id="email"
+                    name="email"
                     type="email"
                     class="mt-1 block w-full"
                     v-model="form.email"
@@ -59,6 +60,7 @@ const submit = () => {
                 <InputLabel for="password" value="Contraseña" />
                 <TextInput
                     id="password"
+                    name="password"
                     type="password"
                     class="mt-1 block w-full"
                     v-model="form.password"

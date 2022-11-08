@@ -36,7 +36,7 @@ function formatDate(dateString) {
     <BreezeAuthenticatedLayout>
         <template #header>
             <h2 class="text-xl font-semibold leading-tight text-gray-800">
-                Control de Usuarios
+                Administración de Usuarios
             </h2>
         </template>
 

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\TipoUsuario;
 use App\Models\User;
+use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Inertia\Inertia;
@@ -12,6 +13,8 @@ use Illuminate\Validation\Rules\Password;
 
 class Usuario extends Controller
 {
+    use RefreshDatabase;
+    
     /**
      * Display a listing of the resource.
      *
@@ -132,8 +135,7 @@ class Usuario extends Controller
     {
         $request->validate([
             'name' => ['required', 'max:255', 'string'],
-            'email' => ['required', 'email', 'string', 'max:255'],            
-            'tipo_id' => ['required', 'integer']
+            'email' => ['required', 'email', 'string', 'max:255'],                        
         ]);
 
         $eUser = [

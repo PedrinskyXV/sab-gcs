@@ -35,7 +35,10 @@ class TipoUsuarioController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $tipo = TipoUsuario::create($request->all());
+        sleep(1);
+
+        return $tipo;
     }
 
     /**
